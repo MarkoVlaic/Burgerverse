@@ -1,0 +1,12 @@
+:root {
+  --backround-color: #190C33;
+  --accent-color-one: #51FCFC;
+  --accent-color-two: #FC51B3;
+  --accent-color-three: #65587F;
+  --color-white: #FFF;
+  --discord-color: #7670FA;
+}
+
+html, body {
+  background-color: var(--backround-color);
+}

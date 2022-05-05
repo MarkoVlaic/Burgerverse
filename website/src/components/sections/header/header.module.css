@@ -1,0 +1,81 @@
+.header {
+  position: relative;
+  width: 100vw;
+  
+  /* margin-top: 20rem; */
+  /* margin-left: -4rem; */
+  margin-left: calc(50% - 50vw);
+
+  overflow-x: clip;
+}
+
+.video {
+  display: block;
+  width: 100vw;
+  object-fit: cover;
+  /* object-position: 0 -3rem; */
+  /* margin-top: -2rem; */
+
+  z-index: 2;
+  position: relative;
+  transform: scale(1.2);
+}
+
+.video::-webkit-media-controls {
+  display: none;
+}
+
+.iosPoster {
+  display: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .video {
+    display: none;
+  }
+
+  .iosPoster {
+    display: block;
+  }
+}
+
+@media(max-width: 412px) {
+  .header {
+    height: 100vh;
+  }
+
+  .header::after {
+    content: ">>";
+    display: block;
+
+    font-family: "helvetica-bold";
+    font-size: 4.5rem;
+    color: var(--accent-color-two);
+    letter-spacing: .1px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 20vh;
+    -webkit-transform: translateX(-50%) rotate(90deg) scale(.8, 1.4);
+    transform: translateX(-50%) rotate(90deg) scale(.8, 1.4);
+  }
+
+  .video, .iosPoster {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
+    width: 100%;
+  }
+
+}
+
+/* disable nebulas on mobile ios */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 900px) {
+    .nebula {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,278 @@
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 5%;
+
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+
+  position: relative;
+  z-index: 3;
+}
+
+.left {
+  flex: 2;
+  display: flex;
+
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.logoContainer {
+  width: 7rem;
+}
+
+
+.navigation {
+  flex: 1;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.link {
+ font-family: 'helvetica';
+ font-size: 2rem;
+ color: var(--color-white);
+ text-decoration: none;
+}
+
+.link:hover, .link:focus {
+  color: var(--accent-color-two);
+}
+
+.social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social > * {
+  margin-right: 4rem;
+}
+
+.social > a:last-child {
+  margin-right: 0;
+}
+
+.social:last-child {
+  margin-right: 0;
+}
+
+.twitter, .opensea, .instagram {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--color-white);
+}
+
+.mobile {
+  display: none;
+  position: absolute;
+}
+
+
+.discordContainer {
+  padding: 2rem;
+  height: 4rem;
+  background-color: var(--color-white);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.discordText, .discordHide {
+  color: #000;
+  font-family: 'helvetica-bold';
+  font-size: 1.5rem;
+
+  margin-top: 5px; /* Add some margin to align the logo and the text */
+}
+
+.discordText {
+  margin-right: 2rem;
+}
+
+.discordLogo {
+  /* display: inline-block; */
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #000;
+}
+
+.menuIcon {
+  display: none;
+}
+
+@media (max-width: 1432px) {
+  .discordText {
+    margin-right: .5rem;
+  }
+}
+
+@media (max-width: 1320px) {
+  .link {
+    font-size: 1.5rem;
+  }
+
+  .logoContainer {
+    width: 5rem;
+  }
+
+  .social > * {
+    margin-right: 3rem;
+  }
+
+  .twitter, .opensea, .instagram {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .discordContainer {
+    height: 3rem;
+    padding: 1.5rem;
+  }
+
+  .discordText, .discordHide {
+    font-size: 1.2rem;
+  }
+
+  .discordLogo {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .menuIcon {
+    display: block;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    
+    --size: 4rem;
+    width: var(--size);
+    height: var(--size);
+
+    fill: var(--accent-color-two);
+
+    z-index: 100;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--backround-color);
+
+    z-index: 99;
+    display: block;
+
+    /* transform: scale(1) translate(0, 0); */
+    transform-origin: top right;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+  }
+
+  .mobile {
+    display: block;
+    position: relative;
+  }
+
+  .left {
+    display: block;
+    height: 95%;
+    width: 100%;
+  }
+
+  .logoContainer {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+
+    width: 5rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: flex-end;
+
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    padding-right: 2rem;
+  }
+
+  .link {
+    font-family: 'helvetica-bold';
+    font-size: 1.6rem;
+
+    --margin-first-last: 4rem;
+  }
+
+  .link:first-child {
+    margin-top: var(--margin-first-last);
+  }
+
+  .link:last-child {
+    margin-bottom: var(--margin-first-last);
+  }
+
+  .collapsed > .menuIcon {
+    fill: var(--color-white);
+  }
+
+  .collapsed > .navbar {
+    /* transform: translateX(100%); */
+    transform: scale(0);
+  }
+
+  .discordHide {
+    display: none;
+  }
+
+  .discordContainer {
+    position: absolute;
+    bottom: 8rem;
+    right: 2rem;
+  }
+
+  .discordText {
+    font-size: 1.4rem;
+  }
+
+  .discordLogo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .social {
+    justify-content: flex-end;
+  }
+
+  .social > * {
+    margin-right: 0;
+    margin-left: 2.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .menuIcon {
+    top: 2rem;
+    right: 1rem;
+
+    width: 30px;
+    height: 30px;
+  }
+}

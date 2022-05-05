@@ -1,0 +1,95 @@
+.link {
+  display: inline-block;
+}
+
+.container {
+  /* padding: 3.5rem 10rem; */
+  /* padding-right: 2rem; */
+  height: 7rem;
+
+  background-color: var(--color-white);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text {
+  color: #000;
+  font-family: 'helvetica-strong';
+  font-size: 3rem;
+
+  margin-right: auto;
+  margin-left: 20%;
+  margin-top: 5px; /* Add some margin to align the logo and the text */
+}
+
+.mobileHide {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.logo {
+  /* display: inline-block; */
+  --size: 6rem;
+  width: var(--size);
+  height: var(--size);
+
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+@media (max-width: 1513px) {
+  .text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1305px) {
+  .text {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobileHide {
+    display: none;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-right: 0;
+    --size: 4rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .text {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    --size: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: .5rem 1rem;
+  }
+
+  .text {
+    margin-right: 1rem;
+  }
+}

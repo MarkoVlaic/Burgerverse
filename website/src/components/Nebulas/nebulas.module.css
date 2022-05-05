@@ -1,0 +1,65 @@
+/* second nebula */
+
+@media (max-width: 560px) {
+  .nebula:nth-child(2) {
+    -webkit-transform: translateX(-40rem);
+        -ms-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+}
+
+@media (max-width: 800px) {
+  .nebula:nth-child(2) {
+    -webkit-transform: translateX(-20rem);
+        -ms-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+  }
+}
+
+/* third nebula */
+@media (max-width: 900px) {
+  .nebula:nth-child(3) {
+    -webkit-transform: translateX(-30rem);
+        -ms-transform: translateX(-30rem);
+            transform: translateX(-30rem);
+  }
+}
+
+@media (max-width: 516px) {
+  .nebula:nth-child(3) {
+    -webkit-transform: translate(-35rem, 35rem);
+        -ms-transform: translate(-35rem, 35rem);
+            transform: translate(-35rem, 35rem);
+  }
+}
+
+/* fourth nebula*/
+@media (max-width: 900px) {
+  .nebula:nth-child(4) {
+    -webkit-transform: translateX(-25rem);
+        -ms-transform: translateX(-25rem);
+            transform: translateX(-25rem);
+  }
+}
+
+@media (max-width: 610px) {
+  .nebula:nth-child(4) {
+    -webkit-transform: translateX(-45rem);
+        -ms-transform: translateX(-45rem);
+            transform: translateX(-45rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .nebula:nth-child(4) {
+    -webkit-transform: translate(-45rem, 20rem);
+        -ms-transform: translate(-45rem, 20rem);
+            transform: translate(-45rem, 20rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .nebula:last-child, .nebula:nth-child(6) {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "stamp": "First Drop",
+    "date": "February 2022.",
+    "image": {
+      "src": "../images/timeline/first.jpg"
+    },
+    "title": "Burgers",
+    "body": "Our first Burgerverse collection will consist of 7,777 unique NFT Burgers. Join our Discord community to make sure to get your own Burger. Mix it later with your favorite intergalactic Side Dishes and more."
+  },
+  {
+    "stamp": "Second Drop",
+    "date": "March 2022.",
+    "image": {
+      "src": "../images/timeline/second.png"
+    },
+    "title": "Side dishes",
+    "body": "For our second collection, we will release NFT Side Dishes. Sounds crazy? There’s more!As a reward for their trust and loyalty, we will give all of our first drop Burger NFT holders one Side Dish NFT for free."
+  },
+  {
+    "stamp": "Third Drop",
+    "date": "April 2022.",
+    "image": {
+      "src": "../images/timeline/third.png"
+    },
+    "title": "",
+    "body": ""
+  },
+  {
+    "stamp": "Token",
+    "date": "May 2022.",
+    "image": {
+      "src": "../images/timeline/third.png"
+    },
+    "title": "",
+    "body": ""
+  }
+]

@@ -1,0 +1,232 @@
+.container {
+  text-align: center;
+  margin-bottom: 20rem;
+
+  z-index: 4;
+  position: relative;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.titleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.reversed > .titleContainer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.title {
+  font-family: 'helvetica-bold';
+  font-size: 4rem;
+  color: var(--color-white);
+  margin-right: 10%;
+}
+
+.reversed > .titleContainer > .title {
+  margin-left: 10%;
+  margin-right: 0;
+}
+
+.number {
+  font-family: 'bd-retrocentric';
+  font-size: 15rem;
+  color: var(--accent-color-three);
+}
+
+.body {
+  font-family: 'helvetica';
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: 3rem;
+
+  z-index: 2;
+}
+
+.content {
+  text-align: right;
+}
+
+.reversed > .content {
+  text-align: left;
+}
+
+.conclusion {
+  font-family: 'helvetica-strong';
+  font-size: 3rem;
+  color: var(--color-white);
+}
+
+@media (max-width: 1240px) {
+  .title {
+    font-size: 3.3rem;
+  }
+
+  .number {
+    font-size: 14.3rem;
+  }
+
+  .body {
+    font-size: 2.3rem;
+  }
+
+  .conclusion {
+    font-size: 2.3rem;
+  }
+
+  .title {
+    margin-right: 5%;
+  }
+
+  .reversed > .titleContainer > .title {
+    margin-right: 0;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    
+    border: 3px solid var(--accent-color-two);
+    border-radius: 30px;
+    
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+
+    --animation-duration: .3s;
+  }
+
+  .container:last-child {
+    margin-bottom: 0;
+  }
+
+  .container::after {
+    content: ">";
+    display: block;
+    width: auto;
+
+    font-size: 2.5rem;
+    font-family: 'helvetica-bold';
+    color: var(--accent-color-two);
+    
+    /* -webkit-transition: transform var(--animation-duration); */
+    -webkit-transition: -webkit-transform var(--animation-duration);
+    transition: -webkit-transform var(--animation-duration);
+    -o-transition: transform var(--animation-duration);
+    transition: transform var(--animation-duration);
+    transition: transform var(--animation-duration), -webkit-transform var(--animation-duration);
+
+    /* -webkit-transform: rotate(-90deg) scale(.9, 1.5); */
+    -webkit-transform: rotate(270deg) scaleX(90%) scaleY(150%);
+        -ms-transform: rotate(-90deg) scaleX(90%) scaleY(150%);
+            transform: rotate(-90deg) scaleX(90%) scaleY(150%);
+  }
+
+  .container.collapsed::after {
+    -webkit-transform: rotate(90deg) scale(.9, 1.5);
+    -ms-transform: rotate(90deg) scaleX(90%) scaleY(150%);
+        transform: rotate(90deg) scaleX(90%) scaleY(150%);
+  }
+
+  /* The arrows are broken in safari so we disable them for now */
+  @supports (-webkit-touch-callout: none) {
+    .container::after {
+      display: none;
+    }
+  }
+
+  .titleContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .number {
+    font-size: 6rem;
+  }
+
+  .title {
+    font-family: 'helvetica-bold';
+    font-size: 1.8rem;
+
+    margin-right: 0;
+    margin-top: -1rem;
+  }
+
+  .body {
+    width: 95%;
+
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    max-height: 50rem;
+
+    /* I would like to do this without max-height with all my heart but i just can't */
+    -webkit-transition-duration: var(--animation-duration);
+         -o-transition-duration: var(--animation-duration);
+            transition-duration: var(--animation-duration);
+    -webkit-transition-property: max-height, -webkit-transform;
+    transition-property: max-height, -webkit-transform;
+    -o-transition-property: max-height, transform;
+    transition-property: max-height, transform;
+    transition-property: max-height, transform, -webkit-transform;
+    -webkit-transition-timing-function: ease-in;
+         -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+
+    -webkit-transform-origin: center top;
+
+        -ms-transform-origin: center top;
+
+            transform-origin: center top;
+    -webkit-transform: translateZ(0) scaleY(100%);
+            transform: translateZ(0) scaleY(100%); /* hack to make the browser offload to GPU */
+  }
+
+  .collapsed > .content {
+    max-height: 0;
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+
+  .conclusion {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

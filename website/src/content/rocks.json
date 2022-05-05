@@ -1,0 +1,65 @@
+[
+  {
+    "image": "../images/rocks/1.png",
+    "width": 400,
+    "height": 400,
+    "top": 22.3,
+    "left": 81.5
+  },
+  {
+    "image": "../images/rocks/7.png",
+    "width": 300,
+    "height": 450,
+    "top": 25.65,
+    "left": 72,
+    "rotation": -88
+  },
+  {
+    "image": "../images/rocks/4.png",
+    "width": 320,
+    "height": 470,
+    "top": 40,
+    "left": 72,
+    "rotation": -20
+  },
+  {
+    "image": "../images/rocks/6.png",
+    "width": 420,
+    "height": 600,
+    "top": 43.8,
+    "left": 82,
+    "rotation": -1
+  },
+  {
+    "image": "../images/rocks/5.png",
+    "width": 260,
+    "height": 375,
+    "top": 58,
+    "left": 51,
+    "rotation": 35
+  },
+  {
+    "image": "../images/rocks/8.png",
+    "width": 500,
+    "height": 500,
+    "top": 59.2,
+    "left": 69,
+    "rotation": 58
+  },
+  {
+    "image": "../images/rocks/7.png",
+    "width": 330,
+    "height": 510,
+    "top": 67.2,
+    "left": -1,
+    "rotation": -88
+  },
+  {
+    "image": "../images/rocks/3.png",
+    "width": 470,
+    "height": 340,
+    "top": 79,
+    "left": 80,
+    "rotation": -1
+  }
+]

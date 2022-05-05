@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  text-align: center;
+
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+
+  padding: 0 4rem;
+
+  position: relative;
+  z-index: 3;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  font-family: 'helvetica-bold';
+  font-size: 6rem;
+  color: var(--color-white);
+
+  margin-bottom: 4rem;
+}
+
+.questionContainer {
+  margin-bottom: 8rem;
+  z-index: 3;
+}
+
+.questionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.questionNumber {
+  font-family: 'bd-retrocentric';
+  font-size: 5rem;
+  color: var(--color-white);
+  margin-right: 4.5rem;
+}
+
+.questionText {
+  font-family: 'helvetica-strong';
+  font-size: 4rem;
+  color: var(--color-white);
+}
+
+.answerText {
+  font-family: 'helvetica';
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-left: 8rem;
+  text-align: left;
+}
+
+@media (max-width: 1300px) {
+  .title {
+    font-size: 5.5rem;
+  }
+
+  .questionNumber {
+    font-size: 4.5rem;
+  }
+
+  .questionText {
+    font-size: 3.5rem;
+  }
+
+  .answerText {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .questionContainer {
+    margin-bottom: 2rem;
+
+    --animation-duration: .2s;
+  }
+
+  .questionHeader::after {
+    content: ">";
+    display: inline;
+    margin-left: auto;
+    width: auto;
+
+    font-size: 2.5rem;
+    font-family: 'helvetica-bold';
+    color: var(--accent-color-two);
+    
+    /* -webkit-transition: transform var(--animation-duration); */
+    -webkit-transition: -webkit-transform var(--animation-duration);
+    transition: -webkit-transform var(--animation-duration);
+    -o-transition: transform var(--animation-duration);
+    transition: transform var(--animation-duration);
+    transition: transform var(--animation-duration), -webkit-transform var(--animation-duration);
+
+    /* -webkit-transform: rotate(-90deg) scaleX(.9, 1.5); */
+    -webkit-transform: rotate(-90deg) scaleX(90%) scaleY(150%);
+        -ms-transform: rotate(-90deg) scaleX(90%) scaleY(150%);
+            transform: rotate(-90deg) scaleX(90%) scaleY(150%);
+  }
+
+  .collapsed > .questionHeader::after {
+    /* -webkit-transform: rotate(90deg) scaleX(.9, 1.5); */
+    -webkit-transform: rotate(90deg) scaleX(90%) scaleY(150%);
+        -ms-transform: rotate(90deg) scaleX(90%) scaleY(150%);
+            transform: rotate(90deg) scaleX(90%) scaleY(150%);
+  }
+
+  /* The arrows are broken in safari so disable them for now */
+  @supports (-webkit-touch-callout: none) {
+    .questionHeader::after {
+      display: none;
+    }
+  }
+
+  .questionNumber {
+    font-size: 3rem;
+    margin-right: 3rem;
+  }
+
+  .questionText {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .answerText {
+    font-size: 1.6rem;
+
+    max-height: 30rem;
+    -webkit-transform: translateZ(0) scale(100%);
+            transform: translateZ(0) scale(100%);
+
+    -webkit-transition-duration: var(--animation-duration);
+
+         -o-transition-duration: var(--animation-duration);
+
+            transition-duration: var(--animation-duration);
+    -webkit-transition-property: max-height, -webkit-transform;
+    transition-property: max-height, -webkit-transform;
+    -o-transition-property: max-height, transform;
+    transition-property: max-height, transform;
+    transition-property: max-height, transform, -webkit-transform;
+    -webkit-transition-timing-function: ease-in;
+         -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  .collapsed > .answerText {
+    max-height: 0;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+}

@@ -1,0 +1,61 @@
+.avatarContainer {
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.image {
+  border-radius: 20px;
+}
+
+.name {
+  font-family: 'helvetica-bold';
+  font-size: 4rem;
+  color: var(--accent-color-one);
+
+  margin-top: 4rem;
+}
+
+.role {
+  font-family: 'helvetica';
+  font-size: 2.8rem;
+  color: var(--color-white);
+}
+
+@media (max-width: 1500px) {
+  .name {
+    font-size: 3.8rem;
+  }
+
+  .role {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .role {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .avatarContainer {
+    margin: 0;
+    transition: transform .1s ease-in-out;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .role {
+    font-size: 1.6rem;
+  }
+
+  .inactive {
+    transform: scale(95%);
+  }
+}

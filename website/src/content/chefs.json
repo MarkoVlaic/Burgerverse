@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Yuno",
+    "role": "Design, Illustration",
+    "avatar": {
+      "src": "../images/chefs/yuno.png"
+    }
+  },
+  {
+    "name": "Ee-un",
+    "role": "3D Modeling, Animation",
+    "avatar": {
+      "src": "../images/chefs/eeun.png"
+    }
+  },
+  {
+    "name": "Makkei",
+    "role": "Blockchain, Coding",
+    "avatar": {
+      "src": "../images/chefs/makei.png"
+    }
+  },
+  {
+    "name": "Xarri",
+    "role": "Marketing, UX design",
+    "avatar": {
+      "src": "../images/chefs/xarri.png"
+    }
+  }
+]

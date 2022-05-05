@@ -1,0 +1,214 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  border: 5px solid var(--accent-color-two);
+  border-radius: 50px;
+
+  margin-top: 6rem;
+  padding: 6rem 2rem;
+
+  overflow-x: visible;
+}
+
+.contentContainer {
+  flex: 1;
+  
+  text-align: center;
+  width: 80%;
+
+  position: relative;
+  z-index: 3;
+}
+
+.socials {
+  display: none;
+  z-index: 3;
+}
+
+.showcaseContainer {
+  flex: 1;
+}
+
+.title {
+  font-family: 'helvetica-bold';
+  font-size: 6rem;
+  color: var(--color-white);
+
+  margin-bottom: 3rem;
+}
+
+.firstParagraph {
+  font-family: 'helvetica';
+  font-size: 3rem;
+  color: var(--color-white);
+
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+
+.secondParagraph {
+  font-family: 'helvetica-strong';
+  font-size: 3rem;
+  color: var(--color-white);
+
+  margin-bottom: 5rem;
+}
+
+.discordButton {
+  width: 70%;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 1500px) {
+  .title {
+    font-size: 5.5rem;
+  }
+
+  .firstParagraph, .secondParagraph {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1358px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .firstParagraph, .secondParagraph {
+    font-size: 2rem;
+  }
+
+  .discordContainer {
+    padding: 2.5rem 7rem;
+    padding-right: 1.5rem;
+  }
+
+  .discordText {
+    font-size: 2.5rem;
+  }
+
+  .discordLogo {
+    --size: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: block;
+    position: relative;
+    
+    padding: 6rem 1rem;
+    padding-top: 3rem;
+
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 90%;
+
+    overflow-y: visible;
+  }
+
+  .contentContainer {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title {
+    font-family: 'helvetica-bold';
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .firstParagraph {
+    width: 100%;
+  }
+
+  .firstParagraph, .secondParagraph {
+    font-size: 1.6rem;
+  }
+
+  .firstParagraph {
+    margin-bottom: .5rem;
+  }
+
+  .secondParagraph {
+    margin-bottom: 3rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .socialLink {
+    display: inline;
+    text-decoration: none;
+  }
+
+  .socialIcon {
+    --size: 3rem;
+    width: var(--size);
+    height: var(--size);
+
+    fill: var(--color-white);
+  }
+
+  .discordButton {
+    width: 40%;
+  }
+
+  .discordButton > div {
+    height: 5rem;
+  }
+
+  .showcaseContainer {
+    position: absolute;
+    width: 100%;
+    top: calc(100% - 50px);
+    left: 0;
+  }
+
+  .rock {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .discordButton {
+    width: 60%;
+  }
+}
+
+/* nebulas */
+.nebula {
+  position: absolute;
+}
+
+.nebula:nth-child(1) {
+  width: 302rem;
+  height: 302rem;
+
+  top: -60rem;
+  left: calc(-120rem + 5%);
+}
+
+/* disable nebulas on mobile ios */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 900px) {
+    .nebula {
+      display: none;
+    }
+  }
+}

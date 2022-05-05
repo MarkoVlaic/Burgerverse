@@ -1,0 +1,51 @@
+[
+  {
+    "image": "../images/nebulas/6.png",
+    "width": 3000,
+    "height": 3000,
+    "top": -5,
+    "left": 0
+  },
+  {
+    "image": "../images/nebulas/11.png",
+    "width": 3200,
+    "height": 2490,
+    "top": 4,
+    "left": 5
+  },
+  {
+    "image": "../images/nebulas/2.png",
+    "width": 3030,
+    "height": 3030,
+    "top": 12,
+    "left": 35
+  },
+  {
+    "image": "../images/nebulas/11.png",
+    "width": 2370,
+    "height": 2370,
+    "top": 37,
+    "left": 38
+  },
+  {
+    "image": "../images/nebulas/2.png",
+    "width": 3030,
+    "height": 3030,
+    "top": 48,
+    "left": 35
+  },
+  {
+    "image": "../images/nebulas/2.png",
+    "width": 2930,
+    "height": 2930,
+    "top": 70,
+    "left": 42
+  },
+  {
+    "image": "../images/nebulas/6.png",
+    "width": 1000,
+    "height": 1000,
+    "top": 93,
+    "left": -25
+  }
+]

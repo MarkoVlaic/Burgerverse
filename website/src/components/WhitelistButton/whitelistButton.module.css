@@ -1,0 +1,36 @@
+.button {
+  padding: 1.6rem 5rem;
+  padding-top: 2.1rem; /* The font is adding a bit of padding at the bottom so we have to fix it */
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  
+  font-family: 'helvetica-bold';
+  font-size: 3rem;
+  border-radius: 40px;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.accentOne {
+  color: var(--accent-color-one);
+  border-color: var(--accent-color-one);
+}
+/* 
+.accentOne:hover {
+  background-color: var(--accent-color-one);
+} */
+
+.accentTwo {
+  color: var(--accent-color-two);
+  border-color: var(--accent-color-two);
+}
+
+/* .accentTwo:hover {
+  background-color: var(--accent-color-two);
+} */
